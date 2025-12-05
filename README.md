@@ -15,22 +15,24 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 - Admin can manage everything  
 
 ---
-
-## Roles
-
-### USER
-- Can enroll in courses  
-- Can view courses & lessons  
-- Can comment  
-
-### INSTRUCTOR
+### INSTRUCTOR 👨‍🏫
 - Can create courses  
 - Can add lessons  
 - Can update and delete own courses  
-
 ### ADMIN
-- Can delete anything (users, courses, comments)  
+- Can delete anything (users, courses, comments)
 
+### Security 🔐
+- JWT Authentication  
+- Password hashing using BCrypt  
+- Role-based access control  
+
+## 🔑 Default Roles
+
+| Role | Permissions |
+|-------|-------------|
+| STUDENT | Enroll, comment, view courses |
+| INSTRUCTOR | Create courses, add lessons, manage their courses |
 ---
 ## Project Structure
 │── controller       
@@ -52,6 +54,40 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 | Validation | Jakarta Validation |
 | Mapping | MapStruct |
 | Build Tool | Maven |
+## 🔑 Default Roles
+
+| Role | Permissions |
+|-------|-------------|
+| STUDENT | Enroll, comment, view courses |
+| INSTRUCTOR | Create courses, add lessons, manage their courses |
+
+## 📌 API Endpoints
+
+### Authentication
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /auth/register | Register user |
+| POST | /auth/login | Login and receive JWT |
+
+### Courses
+| Method | Endpoint | Access |
+|--------|----------|---------|
+| POST | /courses | Instructor Only |
+| GET | /courses | Public |
+| GET | /courses/{id} | Public |
+
+### Lessons
+| Method | Endpoint | Access |
+|--------|----------|---------|
+| POST | /courses/{id}/lessons | Instructor Only |
+| GET | /courses/{id}/lessons | Enrolled users |
+
+### Comments
+| Method | Endpoint |
+|--------|----------|
+| POST | /courses/{id}/comments |
+| GET | /courses/{id}/comments |
+
 
 ## How to Setup The Project
 
