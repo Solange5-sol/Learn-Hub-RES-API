@@ -13,15 +13,7 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 - Students can enroll in courses  
 - Users can comment on courses  
 - Admin can manage everything  
-
 ---
-### INSTRUCTOR 👨‍🏫
-- Can create courses  
-- Can add lessons  
-- Can update and delete own courses  
-### ADMIN
-- Can delete anything (users, courses, comments)
-
 ### Security 🔐
 - JWT Authentication  
 - Password hashing using BCrypt  
@@ -31,8 +23,9 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 
 | Role | Permissions |
 |-------|-------------|
-| STUDENT | Enroll, comment, view courses |
+| ADMIN | Can delete anything |
 | INSTRUCTOR | Create courses, add lessons, manage their courses |
+| USER | Enroll, comment, view courses |
 ---
 ## Project Structure
 │── controller       
@@ -88,10 +81,3 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 | POST | /courses/{id}/comments |
 | GET | /courses/{id}/comments |
 
-
-## How to Setup The Project
-
-1. Clone the project  
-```bash
-git clone <your-repo-url>
-cd LearnHub
