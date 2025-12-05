@@ -23,7 +23,7 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 
 | Role | Permissions |
 |-------|-------------|
-| ADMIN | Can delete anything |
+| ADMIN | Can do anything , delete user,instructor and what they created |
 | INSTRUCTOR | Create courses, add lessons, manage their courses |
 | USER | Enroll, comment, view courses |
 ---
@@ -47,6 +47,7 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 | Validation | Jakarta Validation |
 | Mapping | MapStruct |
 | Build Tool | Maven |
+---
 ## 🔑 Default Roles
 
 | Role | Permissions |
