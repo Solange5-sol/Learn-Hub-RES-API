@@ -48,7 +48,7 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 | Language | Java  |
 | Framework | Spring Boot |
 | Security | JWT & Spring Security |
-| Database | MySQL |
+| Database | PostgreSQL |
 | Validation | Jakarta Validation |
 | Mapping | MapStruct |
 | Build Tool | Maven |
