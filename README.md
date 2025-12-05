@@ -45,7 +45,7 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 ## 🛠 Tech Stack
 | Type | Technology |
 |-------|------------|
-| Language | Java 17+ |
+| Language | Java  |
 | Framework | Spring Boot |
 | Security | JWT & Spring Security |
 | Database | MySQL |
