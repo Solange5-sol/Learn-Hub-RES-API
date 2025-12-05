@@ -33,14 +33,14 @@ The platform supports JWT-based authentication, role-based access, and RESTful A
 
 ---
 ## Project Structure
-│── controller       # Handles HTTP requests and routes them to the service layer
-│── service          # Contains business logic for courses, lessons, comments, etc.
-│── repository       # Interfaces to interact with the database (Spring Data JPA)
-│── dto              # Data Transfer Objects: objects used to transfer data between layers safely
-│── mapper           # MapStruct mappers: convert between Entity <-> DTO
-│── security         # JWT authentication and security configurations
-│── model            # Entity classes representing database tables
-└── exception        # Custom exceptions for handling errors (e.g., CourseNotFoundException)
+│── controller       
+│── service          
+│── repository       
+│── dto             
+│── mapper           
+│── security         
+│── model           
+└── exception       
 
 ## 🛠 Tech Stack
 | Type | Technology |
